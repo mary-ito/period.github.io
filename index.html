@@ -1,76 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br" dir="ltr">
 <head>
 	<meta charset="utf-8">
 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-
 	<title>period.</title>
 
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<link rel="shortcut icon" href="logo-pagina.png">
+	<link rel="shortcut icon" href="logo-bola.svg">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
-	
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div id="container">
 
+	<header id="topo">
+		<div class="logo">
+			<img src="logo.svg">
+		</div>
+	</header>
 
-		<header id="topo">
-			<div class="logo">
-				<img src="logo-pagina.png">
+	<section id="principal">
+
+		<div id="box">
+			<div id="titulo">
+				<h1>bluetooth</h1>
+				<label class="switch">
+				  <input type="checkbox">
+				  <span class="slider round"></span>
+				</label>
 			</div>
-			<div class="bluetooth">
-				<a href="#"><img src="bluetooth.png"></a>
+		</div>
+
+		<div id="box">
+			<div id="titulo">
+				<h1>massagem</h1>
+				<label class="switch">
+				  <input type="checkbox">
+				  <span class="slider round"></span>
+				</label>
 			</div>
-		</header>
+			<div id="intensidades">
+				<a href="#">
+					<div id="circulo" class="massagem">fraco</div>
+				</a>
+				<a href="#">
+					<div id="circulo" class="massagem">médio</div>
+				</a>
+				<a href="#">
+					<div id="circulo" class="massagem">forte</div>
+				</a>
+			</div>
+		</div>
 
+		<div id="box">
 
-		<section id="principal">
+			<div id="titulo">
+				<h1>temperatura</h1>
+				<label class="switch">
+				  <input type="checkbox">
+				  <span class="slider round"></span>
+				</label>
+			</div>
 
-			<div class="temperatura">
-				<div class="liga-desliga">
-					<h1>temperatura</h1>
-					<a href="#"><img src="power.png"></a>
+			<div id="intensidades">
+				<a href="#">
+					<div id="circulo" class="temperatura">37°</div>
+				</a>
+				<a href="#">
+					<div id="circulo" class="temperatura">45°</div>
+				</a>
+				<a href="#">
+					<div id="circulo" class="temperatura">55°</div>
+				</a>
+			</div>
+
+		</div>
+		<div id="box" class="bateria">
+
+			<div id="titulo">
+				<p>nível da bateria: </p>
+				<div>
+					<span id="bateria"></span>%<img class="icon-battery" src="icon-battery.svg">
 				</div>
-				<div class="ajuste">
-					<div class="slidecontainer">
-	  					<input type="range" min="0" max="200" value="100" class="slider">
-					</div>
-					<div class="temperaturas">
-						<div class="temp">37°</div>
-						<div class="temp">45°</div>
-						<div class="temp">55°</div>
-					</div>
-				</div>
 			</div>
 
-			<div class="massagem">
-				<div class="liga-desliga">
-					<h1>massagem</h1>
-					<a href="#"><img src="power.png"></a>
-				</div>
-				<div class="ajuste">
-					<div class="slidecontainer">
-	  					<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-					</div>
-					<div class="intensidades">
-						<div class="intensidade">leve</div>
-						<div class="intensidade">forte</div>
-					</div>					
-				</div>
-			</div>
+		</div>
 
-			<div class="bateria">
-				<h2>bateria 65%</h2>
-			</div>
-		</section>
-
-
-	</div>
-	
+	</section>
+	<script type="text/javascript" ></script>
 </body>
 </html>
