@@ -63,7 +63,7 @@ a {
 }
 
 /* título (bluetooth, massagem, temperatura) e swicth */
-#titulo {
+#titulo-temperatura, #titulo-massagem {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

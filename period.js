@@ -58,22 +58,36 @@ function show_bateria() {
 // bloquear e desbloquear massagem e temperatura
 function permitir() {
 
-	let class_permissao = null;
+	let class_permissao_massagem = null;
+	let class_permissao_temperatura = null;
 
 	let slider = document.getElementById("slider");
 
     if (slider.checked) {
-        class_permissao = "unblock";
+        class_permissao_massagem = "unblock";
+        class_permissao_temperatura = "unblock";
+        document.getElementById('massagem').disabled = false;
+        document.getElementById('temperatura').disabled = false;
     } 
     else {
-        class_permissao = "block";
+        class_permissao_massagem = "block";
+        class_permissao_temperatura = "block";
+        document.getElementById('massagem').disabled = true;
+        document.getElementById('temperatura').disabled = true;
+
+        document.getElementById('massagem').checked = false;
+        document.getElementById('temperatura').checked = false;
+        show_intensidades();
     }
 
-    let permissao = document.getElementById("titulo");
+    let permissao_massagem = document.getElementById("titulo-massagem");
+    let permissao_temperatura = document.getElementById("titulo-temperatura");
 
-    permissao.className = class_permissao;
+    permissao_massagem.className = class_permissao_massagem;
+    permissao_temperatura.className = class_permissao_temperatura;
 
-	console.log(permissao.className);
+    console.log(permissao_massagem.className);
+	console.log(permissao_temperatura.className);
 
 };
 
