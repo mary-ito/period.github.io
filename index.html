@@ -25,24 +25,30 @@
 	<section id="principal">
 
 		<div id="box">
-			<div id="titulo">
-				<h1>bluetooth</h1>
-				<label class="switch">
-				  <input type="checkbox">
+			<div id="titulo-bluetooth">
+
+				<p>bluetooth</p>
+
+				<label class="switch" id="bluetooth">
+				  <input type="checkbox" id="slider" class="slider-bluetooth">
 				  <span class="slider round"></span>
 				</label>
+
 			</div>
 		</div>
 
 		<div id="box">
-			<div id="titulo">
-				<h1>massagem</h1>
+			<div id="titulo" class="block">
+
+				<p>massagem</p>
+
 				<label class="switch">
-				  <input type="checkbox">
+				  <input type="checkbox" id="massagem">
 				  <span class="slider round"></span>
 				</label>
+
 			</div>
-			<div id="intensidades">
+			<div id="intensidades-massagem" class="off">
 				<a href="#">
 					<div id="circulo" class="massagem">fraco</div>
 				</a>
@@ -57,15 +63,18 @@
 
 		<div id="box">
 
-			<div id="titulo">
-				<h1>temperatura</h1>
+			<div id="titulo" class="block">
+
+				<p>temperatura</p>
+
 				<label class="switch">
-				  <input type="checkbox">
+				  <input type="checkbox" id="temperatura">
 				  <span class="slider round"></span>
 				</label>
+
 			</div>
 
-			<div id="intensidades">
+			<div id="intensidades-temperatura" class="off">
 				<a href="#">
 					<div id="circulo" class="temperatura">37°</div>
 				</a>
@@ -78,18 +87,25 @@
 			</div>
 
 		</div>
-		<div id="box" class="bateria">
+		<div id="box-bateria" class="off bateria">
 
-			<div id="titulo">
-				<p>nível da bateria: </p>
+			<div id="nivel-bateria">
 				<div>
-					<span id="bateria"></span>%<img class="icon-battery" src="icon-battery.svg">
+					<p>nível da bateria: </p>
 				</div>
+
+				<div>
+					<span id="bateria"></span>
+					<img class="icon-battery" src="icon-battery.svg">
+				</div>
+
 			</div>
 
 		</div>
 
 	</section>
-	<script type="text/javascript" ></script>
+
+	<script type="text/javascript" src="period.js"></script>
+
 </body>
 </html>

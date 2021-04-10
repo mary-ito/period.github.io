@@ -1,13 +1,12 @@
 body {
 	background-color: #F3F2F7;
 	font-family: 'Montserrat', sans-serif;
-	color: #35245B;
 	margin-top: 30px;
-	margin-left: 5vh;
-	margin-right: 5vh;
+	margin-left: 3vh;
+	margin-right: 3vh;
 	background-repeat: no-repeat;
-	background-image: url(background.png);
-	background-position: -210px -230px;
+	background-image: url(background1.png);
+	background-position: -210px -270px;
 	background-attachment: fixed;
 }
 
@@ -22,7 +21,7 @@ a {
 	font-weight: bold;
 }
 
-#box {
+#box, #box-bateria {
 	background: #fff;
 	border-radius: 10px;
 	border: none;
@@ -31,9 +30,7 @@ a {
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-#intensidades {
-	align-items: center;
-	display: flex;
+#intensidades-massagem, #intensidades-temperatura {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
@@ -56,23 +53,39 @@ a {
 	margin-bottom: 15px;
 }
 
-.massagem:hover,.massagem:checked {
+/*quando clicar nos círculos */
+#circulo.massagem:hover, #circulo.massagem:enabled { /* perguntar pq precisa dos dois para funfar */
 	background: #EB5A59;
 }
 
-.temperatura:hover,.temperatura:checked {
+#circulo.temperatura:hover, #circulo.temperatura:enabled {
 	background: #EB5A59;
 }
 
+/* título (bluetooth, massagem, temperatura) e swicth */
 #titulo {
-	align-items: center;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	align-content: center;
+	align-content: space-between;
 	margin-left: 3vh;
 	margin-right: 3vh;
+	font-size: 1.7em;
+	font-weight: normal;
+}
+
+#titulo-bluetooth {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
+	margin-left: 3vh;
+	margin-right: 3vh;
+	color: #000;
+	font-size: 1.7em;
+	font-weight: normal;
 }
 
 /* The switch - the box around the slider */
@@ -103,6 +116,7 @@ a {
   transition: .4s;
 }
 
+/* bolinha */
 .slider:before {
   position: absolute;
   content: "";
@@ -115,27 +129,39 @@ a {
   transition: .4s;
 }
 
+/* muda a cor */
 input:checked + .slider {
   background-color: #7AF38E;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #7AF38E;
-}
-
+/* arrasta a bolinha */
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
+/* arredonda a caixinha */
 .slider.round {
   border-radius: 34px;
 }
 
+/* arredonda o slider */
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* ajustes bateria */
+#nivel-bateria {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
+	margin-left: 3vh;
+	margin-right: 3vh;
+	font-size: 1.3em;
+	color: #000;
 }
 
 .bateria {
@@ -144,4 +170,24 @@ input:checked + .slider:before {
 
 .icon-battery {
 	margin-left: 1vh;
+}
+
+span#bateria:after {
+	content: "%";
+}
+
+.on {
+	display: flex;
+}
+
+.off {
+	display: none;
+}
+
+.block {
+	color: #ccc;
+}
+
+.unblock {
+	color: #000;
 }
