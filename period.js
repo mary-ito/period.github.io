@@ -74,7 +74,6 @@ function permitir() {
         class_permissao_temperatura = "block";
         document.getElementById('massagem').disabled = true;
         document.getElementById('temperatura').disabled = true;
-
         document.getElementById('massagem').checked = false;
         document.getElementById('temperatura').checked = false;
         show_intensidades();
@@ -93,7 +92,9 @@ function permitir() {
 
 // quando clicar nos switchs
 massagem.onclick = () => { show_intensidades() };
+
 temperatura.onclick = () => { show_intensidades() };
+
 slider.onclick = () => { 
 	show_bateria();
 	permitir();
