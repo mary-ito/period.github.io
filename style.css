@@ -1,5 +1,9 @@
 .splash-screen {
 	background: #F3F2F7;
+	background-image: url(splash.png);
+	background-position: -210px -270px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	position: absolute;
 	top: 0;
 	left: 0;
