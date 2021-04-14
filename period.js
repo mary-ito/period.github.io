@@ -10,7 +10,7 @@ function splashOut() {
     setTimeout(() => {
 	console.log(splash);
 	splash.className = "splash-screen-none";
-    },2000, splash);
+    },1000, splash);
 };
 
 // definir nível da bateria

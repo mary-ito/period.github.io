@@ -17,13 +17,13 @@
 	justify-content: center;
 
 	opacity: 1;
-	transition: all 2s ease-in-out;
-	transform: scale(1);
+	transition: all 1s ease-in-out;
+	
 }
 
 .splash-screen-out {
 	opacity: 0;
-	transform: scale(4);
+	
 }
 
 .splash-screen-none {
