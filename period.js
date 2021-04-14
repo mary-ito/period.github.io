@@ -1,12 +1,16 @@
 // splash screen
+window.addEventListener("load", () => {
+    setTimeout(splashOut, 2000);
+})
+
 function splashout() {
-    var splash = document.querySelector(".splash-screen");
+    let splash = document.querySelector(".splash-screen");
     splash.classList.add("splash-screen-out");
 	
     setTimeout(() => {
 	console.log(splash);
 	splash.className = "splash-screen-none";
-    },2000);
+    },2000, splash);
 };
 
 // definir nível da bateria
