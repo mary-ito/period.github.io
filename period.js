@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     setTimeout(splashOut, 2000);
 })
 
-function splashout() {
+function splashOut() {
     let splash = document.querySelector(".splash-screen");
     splash.classList.add("splash-screen-out");
 	
