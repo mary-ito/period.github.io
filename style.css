@@ -1,3 +1,30 @@
+@keyframes animation {
+	from {width: 50px; heigh:50px;}
+	to {width: 300px; heigh: 300px;}
+}
+
+.splash-bola {
+	background-color: #35245B;
+	border-radius: 300px;
+	width: 300px;
+	heigh: 300px;
+	
+	animation-name: animation;
+	animation-duration: 2s;
+	animation-delay: 0s;
+}
+
+.splash-title {
+	color: #F5F5F5;
+	font-size: 4.5em;
+	font-family: "Yeseva One", cursive;
+	position: absolute;
+	text-align: center;
+	margin-left: 10%;
+	margin-top: 25%;
+}
+	
+
 .splash-screen {
 	background: #F3F2F7;
 	background-image: url(splash.png);
@@ -22,17 +49,11 @@
 }
 
 .splash-screen-out {
-	opacity: 0;
-	
+	opacity: 0;	
 }
 
 .splash-screen-none {
 	display: none;
-}
-
-.splash-logo {
-	width: 70vw;
-	height: 70vh;
 }
 
 body {
