@@ -4,24 +4,24 @@
 }
 
 .splash-bola {
+	font-family: "Yeseva One", cursive;
+	font-size: 4.5em;
+	color: #F5F5F5;
+
 	background-color:#35245B;
 	border-radius:300px;
+
 	width:300px;
-	height: 300px;
+	height:300px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 
 	animation-name: animation;
 	animation-duration: 2s;
 	animation-delay: 0s;   
-}
-
-.splash-title {
-	color: #F5F5F5;
-	font-size: 4.5em;
-	font-family: "Yeseva One", cursive;
-	position: absolute;
-	text-align: center;
-	margin-left: 10%;
-	margin-top: 25%;
 }
 
 .splash-screen {
