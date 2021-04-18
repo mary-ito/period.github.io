@@ -104,8 +104,7 @@ a {
 	margin-right: 3vh;
 }
 
-#circulo {
-	background: #C8C5C5;
+#fraco, #medio, #forte, #t37, #t45, #t55 {
 	border-radius: 50%;
 	width: 70px;
 	height: 70px;
@@ -118,13 +117,12 @@ a {
 	margin-bottom: 15px;
 }
 
-/*quando clicar nos círculos */
-#circulo.massagem:hover, #circulo.massagem:enabled { /* perguntar pq precisa dos dois para funfar */
+.enabled {
 	background: #EB5A59;
 }
 
-#circulo.temperatura:hover, #circulo.temperatura:enabled {
-	background: #EB5A59;
+.disabled {
+	background: #C8C5C5;
 }
 
 /* título (bluetooth, massagem, temperatura) e swicth */

@@ -8,7 +8,6 @@ function splashOut() {
     splash.classList.add("splash-screen-out");
 	
     setTimeout(() => {
-	console.log(splash);
 	splash.className = "splash-screen-none";
     },2000, splash);
 };
@@ -43,9 +42,6 @@ function show_intensidades() {
     intensidades_massagem.className = class_onoff_massagem;
     intensidades_temperatura.className = class_onoff_temperatura;
 
-	console.log(intensidades_massagem.className);
-	console.log(intensidades_temperatura.className);
-
 };
 
 // mostrar nível da bateria
@@ -65,8 +61,6 @@ function show_bateria() {
     let bateria = document.getElementById("box-bateria");
 
     bateria.className = class_onoff_bluetooth;
-
-	console.log(bateria.className);
 
 };
 
@@ -100,9 +94,6 @@ function permitir() {
     permissao_massagem.className = class_permissao_massagem;
     permissao_temperatura.className = class_permissao_temperatura;
 
-    console.log(permissao_massagem.className);
-	console.log(permissao_temperatura.className);
-
 };
 
 // quando clicar nos switchs
@@ -114,6 +105,20 @@ slider.onclick = () => {
 	show_bateria();
 	permitir();
 };
+
+function Enable(id) {
+    if (document.getElementById(id)) {
+        document.getElementById(id).removeAttribute("disabled");
+        document.getElementById(id).className = "enabled";
+    }
+}
+
+function Disable(id) {
+    if (document.getElementById(id)) {
+        document.getElementById(id).removeAttribute("enabled");
+        document.getElementById(id).className = "disabled";
+    }
+}
 
 // quando carregar a página
 window.onload = () => {

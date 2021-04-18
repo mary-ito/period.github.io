@@ -13,6 +13,7 @@
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
 </head>
@@ -57,14 +58,14 @@
 			</div>
 
 			<div id="intensidades-massagem" class="off">
-				<a href="#">
-					<div id="circulo" class="massagem">fraco</div>
+				<a href="#fraco">
+					<div id="fraco" class="massagem disabled" onclick="Enable('fraco'); Disable('medio'); Disable('forte');">fraco</div>
 				</a>
-				<a href="#">
-					<div id="circulo" class="massagem">médio</div>
+				<a href="#medio">
+					<div id="medio" class="massagem disabled" onclick="Enable('medio'); Disable('fraco'); Disable('forte');">médio</div>
 				</a>
-				<a href="#">
-					<div id="circulo" class="massagem">forte</div>
+				<a href="#forte">
+					<div id="forte" class="massagem disabled" onclick="Enable('forte'); Disable('fraco'); Disable('medio');">forte</div>
 				</a>
 			</div>
 
@@ -84,14 +85,14 @@
 			</div>
 
 			<div id="intensidades-temperatura" class="off">
-				<a href="#">
-					<div id="circulo" class="temperatura">37°</div>
+				<a href="#t37">
+					<div id="t37" class="temperatura disabled" onclick="Enable('t37'); Disable('t45'); Disable('t55');">37°</div>
 				</a>
-				<a href="#">
-					<div id="circulo" class="temperatura">45°</div>
+				<a href="#t45">
+					<div id="t45" class="temperatura disabled" onclick="Enable('t45'); Disable('t37'); Disable('t55');">45°</div>
 				</a>
-				<a href="#">
-					<div id="circulo" class="temperatura">55°</div>
+				<a href="#t55">
+					<div id="t55" class="temperatura disabled" onclick="Enable('t55'); Disable('t37'); Disable('t45');">55°</div>
 				</a>
 			</div>
 
