@@ -13,22 +13,31 @@ function splashOut() {
 };
 
 // definir nível da bateria
-let span_bateria = document.getElementById("bateria");
+
+var span_bateria = document.getElementById("bateria");
+
+function numero_aleatorio() {
+    let n = Math.random() * 100;
+    n = Math.round(n);
+
+    return n;
+}
 
 function nivelBateria() {
 
-    let bateria = document.querySelector(".fas");
+    let bateria = document.querySelector("i.fas");
+    span_bateria.textContent = numero_aleatorio();
 
     if (span_bateria.textContent = 0) {
         bateria.classList.add("fa-battery-empty");
     }
-    else if (0 < span_bateria.textContent <= 25) {
+    else if (span_bateria.textContent > 0 & span_bateria.textContent <= 25) {
         bateria.classList.add("fa-battery-quarter");
     }
-    else if (25 < span_bateria.textContent <= 50) {
+    else if (span_bateria.textContent > 25 & span_bateria.textContent <= 50) {
         bateria.classList.add("fa-battery-half");
     }
-    else if (50 < span_bateria.textContent <= 75) {
+    else if (span_bateria.textContent > 50 & span_bateria.textContent <= 75) {
         bateria.classList.add("fa-battery-three-quarters");
     }
     else {
@@ -69,20 +78,15 @@ function show_intensidades() {
 // mostrar nível da bateria
 function show_bateria() {
 
-	let class_onoff_bluetooth = null;
-
 	let slider = document.getElementById("slider");
-
-    if (slider.checked) {
-        class_onoff_bluetooth = "on";
-    } 
-    else {
-        class_onoff_bluetooth = "off";
-    }
-
     let bateria = document.getElementById("box-bateria");
 
-    bateria.className = class_onoff_bluetooth;
+    if (slider.checked) {
+        bateria.className = "on";
+    } 
+    else {
+        bateria.className = "off";
+    }
 
 };
 
@@ -148,4 +152,5 @@ window.onload = () => {
 	permitir();
 	show_bateria();
 	show_intensidades();
+    nivelBateria();
 };
