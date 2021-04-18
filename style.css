@@ -216,11 +216,12 @@ input:checked + .slider:before {
 
 /* ajustes bateria */
 #nivel-bateria {
+	width: 100vw;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	align-content: space-between;
+	align-content: center;
 	margin-left: 3vh;
 	margin-right: 3vh;
 	font-size: 1.3em;
