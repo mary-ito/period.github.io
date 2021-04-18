@@ -15,6 +15,28 @@ function splashOut() {
 // definir nível da bateria
 let span_bateria = document.getElementById("bateria");
 
+function nivelBateria() {
+
+    let bateria = document.querySelector(".fas");
+
+    if (span_bateria.textContent = 0) {
+        bateria.classList.add("fa-battery-empty");
+    }
+    else if (0 < span_bateria.textContent <= 25) {
+        bateria.classList.add("fa-battery-quarter");
+    }
+    else if (25 < span_bateria.textContent <= 50) {
+        bateria.classList.add("fa-battery-half");
+    }
+    else if (50 < span_bateria.textContent <= 75) {
+        bateria.classList.add("fa-battery-three-quarters");
+    }
+    else {
+        bateria.classList.add("fa-battery-full");
+    }
+
+};
+
 // abrir aba de intensidades
 function show_intensidades() {
 
@@ -106,6 +128,7 @@ slider.onclick = () => {
 	permitir();
 };
 
+// botões de intensidades
 function Enable(id) {
     if (document.getElementById(id)) {
         document.getElementById(id).removeAttribute("disabled");

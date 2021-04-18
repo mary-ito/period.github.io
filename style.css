@@ -240,6 +240,10 @@ span#bateria:after {
 	content: "%";
 }
 
+i {
+	color: #000;
+}
+
 .on {
 	display: flex;
 }
