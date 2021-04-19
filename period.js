@@ -25,24 +25,25 @@ function numero_aleatorio() {
 
 function nivelBateria() {
 
-    let bateria = document.querySelector("i.fas");
+    let bateria = document.querySelector("i");
     span_bateria.textContent = numero_aleatorio();
+    let nivel_bat = parseInt(span_bateria.textContent)
 
-    if (span_bateria.textContent = 0) {
-        bateria.classList.add("fa-battery-empty");
+    if (nivel_bat == 0) {
+        bateria.className = "fas fa-battery-empty";
     }
-    else if (span_bateria.textContent > 0 & span_bateria.textContent <= 25) {
-        bateria.classList.add("fa-battery-quarter");
+    else if (nivel_bat > 0 & nivel_bat <= 25) {
+        bateria.className = "fas fa-battery-quarter";
     }
-    else if (span_bateria.textContent > 25 & span_bateria.textContent <= 50) {
-        bateria.classList.add("fa-battery-half");
+    else if (nivel_bat > 25 & nivel_bat <= 50) {
+        bateria.className = "fas fa-battery-half";
     }
-    else if (span_bateria.textContent > 50 & span_bateria.textContent <= 75) {
-        bateria.classList.add("fa-battery-three-quarters");
+    else if (nivel_bat > 50 & nivel_bat <= 75) {
+        bateria.className = "fas fa-battery-three-quarters";
     }
     else {
-        bateria.classList.add("fa-battery-full");
-    }
+        bateria.className = "fas fa-battery-full";
+    } 
 
 };
 
