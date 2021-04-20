@@ -139,6 +139,7 @@ function Enable(id) {
         document.getElementById(id).removeAttribute("disabled");
         document.getElementById(id).className = "enabled";
     }
+    console.log(id);
 }
 
 function Disable(id) {
