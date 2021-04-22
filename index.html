@@ -31,92 +31,87 @@
 		</div>
 	</header>
 
-	<section id="principal">
+	<div id="box">
+		<div id="titulo-bluetooth">
 
-		<div id="box">
-			<div id="titulo-bluetooth">
+			<p>bluetooth</p>
 
-				<p>bluetooth</p>
+			<label class="switch" id="bluetooth">
+				<input type="checkbox" id="slider" class="slider-bluetooth">
+				<span class="slider round"></span>
+			</label>
 
-				<label class="switch" id="bluetooth">
-				  <input type="checkbox" id="slider" class="slider-bluetooth">
-				  <span class="slider round"></span>
-				</label>
-
-			</div>
 		</div>
+	</div>
 
-		<div id="box-massagem">
+	<div id="box-massagem">
 
-			<div id="titulo-massagem" class="block">
+		<div id="titulo-massagem" class="block">
 
-				<p>massagem</p>
+			<p>massagem</p>
 
-				<label class="switch">
-				  <input type="checkbox" id="massagem">
-				  <span class="slider round"></span>
-				</label>
-
-			</div>
-
-			<div id="intensidades-massagem" class="off">
-				<a href="#fraco">
-					<div id="fraco" class="massagem disabled" onclick="Enable('fraco'); Disable('medio'); Disable('forte');">fraco</div>
-				</a>
-				<a href="#medio">
-					<div id="medio" class="massagem disabled" onclick="Enable('medio'); Disable('fraco'); Disable('forte');">médio</div>
-				</a>
-				<a href="#forte">
-					<div id="forte" class="massagem disabled" onclick="Enable('forte'); Disable('fraco'); Disable('medio');">forte</div>
-				</a>
-			</div>
+			<label class="switch">
+				<input type="checkbox" id="massagem">
+				<span class="slider round"></span>
+			</label>
 
 		</div>
 
-		<div id="box-temperatura">
+		<div id="intensidades-massagem" class="off">
+			<a href="#fraco">
+				<div id="fraco" class="massagem disabled" onclick="Enable('fraco'); Disable('medio'); Disable('forte');">fraco</div>
+			</a>
+			<a href="#medio">
+				<div id="medio" class="massagem disabled" onclick="Enable('medio'); Disable('fraco'); Disable('forte');">médio</div>
+			</a>
+			<a href="#forte">
+				<div id="forte" class="massagem disabled" onclick="Enable('forte'); Disable('fraco'); Disable('medio');">forte</div>
+			</a>
+		</div>
 
-			<div id="titulo-temperatura" class="block">
+	</div>
 
-				<p>temperatura</p>
+	<div id="box-temperatura">
 
-				<label class="switch">
-				  <input type="checkbox" id="temperatura">
-				  <span class="slider round"></span>
-				</label>
+		<div id="titulo-temperatura" class="block">
 
-			</div>
+			<p>temperatura</p>
 
-			<div id="intensidades-temperatura" class="off">
-				<a href="#t37">
-					<div id="t37" class="temperatura disabled" onclick="Enable('t37'); Disable('t45'); Disable('t55');">37°</div>
-				</a>
-				<a href="#t45">
-					<div id="t45" class="temperatura disabled" onclick="Enable('t45'); Disable('t37'); Disable('t55');">45°</div>
-				</a>
-				<a href="#t55">
-					<div id="t55" class="temperatura disabled" onclick="Enable('t55'); Disable('t37'); Disable('t45');">55°</div>
-				</a>
-			</div>
+			<label class="switch">
+				<input type="checkbox" id="temperatura">
+				<span class="slider round"></span>
+			</label>
 
 		</div>
 
-		<div id="box-bateria" class="off bateria">
+		<div id="intensidades-temperatura" class="off">
+			<a href="#t37">
+				<div id="t37" class="temperatura disabled" onclick="Enable('t37'); Disable('t45'); Disable('t55');">37°</div>
+			</a>
+			<a href="#t45">
+				<div id="t45" class="temperatura disabled" onclick="Enable('t45'); Disable('t37'); Disable('t55');">45°</div>
+			</a>
+			<a href="#t55">
+				<div id="t55" class="temperatura disabled" onclick="Enable('t55'); Disable('t37'); Disable('t45');">55°</div>
+			</a>
+		</div>
 
-			<div id="nivel-bateria">
+	</div>
+
+	<div id="box-bateria" class="off bateria">
+
+		<div id="nivel-bateria">
 				
-				<p>nível da bateria: </p>
+			<p>nível da bateria: </p>
 				
-				<div>
-					<span id="bateria"></span>
-					<!--<img class="icon-battery" src="icon-battery.svg">-->
-					<i></i>
-				</div>
-
+			<div>
+				<span id="bateria"></span>
+				<i></i>
 			</div>
 
 		</div>
 
-	</section>
+	</div>
 
 	<script src="period.js"></script>
 
