@@ -1,4 +1,5 @@
 // splash screen
+
 window.addEventListener("load", () => {
     setTimeout(splashOut, 2000);
 })
@@ -11,6 +12,7 @@ function splashOut() {
 	splash.className = "splash-screen-none";
     },2000, splash);
 };
+
 
 // definir nível da bateria
 
@@ -47,7 +49,8 @@ function nivelBateria() {
 
 };
 
-// abrir aba de intensidades
+
+// mostrar aba de intensidades
 function show_intensidades() {
 
 	let class_onoff_massagem = null;
@@ -76,6 +79,7 @@ function show_intensidades() {
 
 };
 
+
 // mostrar nível da bateria
 function show_bateria() {
 
@@ -90,6 +94,7 @@ function show_bateria() {
     }
 
 };
+
 
 // bloquear e desbloquear massagem e temperatura
 function permitir() {
@@ -123,17 +128,8 @@ function permitir() {
 
 };
 
-// quando clicar nos switchs
-massagem.onclick = () => { show_intensidades() };
 
-temperatura.onclick = () => { show_intensidades() };
-
-slider.onclick = () => { 
-	show_bateria();
-	permitir();
-};
-
-// botões de intensidades
+// botões das intensidades
 function Enable(id) {
     if (document.getElementById(id)) {
         document.getElementById(id).removeAttribute("disabled");
@@ -148,6 +144,18 @@ function Disable(id) {
         document.getElementById(id).className = "disabled";
     }
 }
+
+
+// quando clicar nos switchs
+massagem.onclick = () => { show_intensidades() };
+
+temperatura.onclick = () => { show_intensidades() };
+
+slider.onclick = () => { 
+	show_bateria();
+	permitir();
+};
+
 
 // quando carregar a página
 window.onload = () => {
