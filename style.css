@@ -86,7 +86,7 @@ a {
 	font-weight: bold;
 }
 
-#box, #box-bateria {
+#box, #box-massagem, #box-temperatura, #box-bateria {
 	background: #fff;
 	border-radius: 10px;
 	border: none;
